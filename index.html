@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMTECH Engineering — Robotics Summit & Expo 2026</title>
+<meta name="description" content="Embedded engineering partner for robotics, automation, and advanced manufacturing. Meet EMTECH at Robotics Summit & Expo 2026, May 27–28.">
+<meta property="og:title" content="EMTECH Engineering — Robotics Summit 2026">
+<meta property="og:description" content="Embedded Engineering Partner — scaling your engineering capacity without the overhead. Talk to our team at Robotics Summit 2026.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1A2B;}
+:root{
+  --bg-white:#FFFFFF;--bg-soft:#EBF1F9;--bg-tint:#D8E6F3;--bg-dark:#0D1A2B;
+  --navy:#0D1A2B;--navy-mid:#1E3A5C;--navy-soft:#3D5A7A;
+  --text-1:#0D1A2B;--text-2:#3D5A7A;--text-3:#6B859F;
+  --card-bg:#FFFFFF;--card-b:#C8DAED;
+  --shadow:0 2px 20px rgba(13,26,43,.08);--shadow-lg:0 10px 40px rgba(13,26,43,.15);
+  --green:#6CC04A;--green-d:#4A8A2E;--green-t:#EBF6E2;--green-b:#A8DA88;--green-btn:#0B1C08;
+  --r-xs:2px;--r-sm:3px;--r-md:4px;--r-xl:6px;
+}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+@keyframes up{to{opacity:1;transform:translateY(0);}}
+@keyframes slideIn{to{opacity:1;transform:translateX(0);}}
+
+/* ── Shared ── */
+.em-badge{display:inline-flex;align-items:center;gap:9px;background:var(--green-t);border:1px solid var(--green-b);border-radius:var(--r-sm);padding:7px 14px;font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.13em;color:var(--green-d);text-transform:uppercase;width:fit-content;}
+.em-badge--dark{background:rgba(108,192,74,.13);border-color:rgba(108,192,74,.3);color:#6CC04A;}
+.em-badge__dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;animation:pulse 2.4s ease-in-out infinite;}
+.em-pip{width:7px;height:7px;border-radius:50%;background:#6CC04A;box-shadow:0 0 8px rgba(108,192,74,.6);flex-shrink:0;animation:pulse 1.8s ease-in-out infinite;}
+.em-h2{font-family:'Outfit',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;color:var(--text-1);letter-spacing:-.025em;line-height:1.1;margin:16px 0 14px;}
+.em-h2 em{font-style:normal;color:var(--green);}
+.em-sub{font-size:17px;color:var(--text-2);line-height:1.7;max-width:600px;margin:0 auto;}
+.em-btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--green-btn);font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;letter-spacing:.01em;padding:15px 30px;border-radius:var(--r-sm);text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;}
+.em-btn:hover{background:#7DD65A;transform:translateY(-2px);box-shadow:0 8px 28px rgba(108,192,74,.32);}
+.em-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-family:'Outfit',sans-serif;font-size:15px;font-weight:600;padding:14px 26px;border-radius:var(--r-sm);border:1.5px solid rgba(255,255,255,.3);text-decoration:none;cursor:pointer;transition:border-color .2s,background .2s,transform .15s;}
+.em-ghost:hover{border-color:rgba(255,255,255,.75);background:rgba(255,255,255,.08);transform:translateY(-2px);}
+
+/* ════════ NAV ════════ */
+.em-nav{width:100%;background-color:#0D1A2B;border-bottom:1px solid rgba(108,192,74,.12);position:sticky;top:0;z-index:999;}
+@supports(backdrop-filter:blur(1px)){.em-nav{background-color:rgba(9,15,28,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}}
+.em-nav__i{max-width:1280px;margin:0 auto;padding:0 60px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.em-nav__event{display:flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;color:rgba(255,255,255,.58);}
+.em-nav__event strong{color:#fff;}
+@media(max-width:900px){.em-nav__event{display:none;}}
+@media(max-width:768px){.em-nav__i{padding:0 24px;}}
+
+/* ════════ HERO ════════ */
+.em-hero{position:relative;width:100%;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--bg-dark);}
+.em-hero__vw{position:absolute;inset:0;z-index:0;}
+.em-hero__vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;}
+.em-hero__ov{position:absolute;inset:0;z-index:1;background:linear-gradient(108deg,rgba(9,15,28,.82) 0%,rgba(9,15,28,.5) 48%,rgba(9,15,28,.28) 100%),linear-gradient(to top,rgba(9,15,28,.92) 0%,transparent 10%);}
+.em-hero__i{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:100px 60px 100px calc(60px + 12%);display:flex;align-items:center;min-height:calc(100vh - 70px);}
+.em-hero__left{display:flex;flex-direction:column;gap:30px;max-width:580px;}
+.em-hero__badge-anim{opacity:0;transform:translateX(-40px);animation:slideIn .8s cubic-bezier(0.16,1,0.3,1) .15s forwards;}
+.em-hero__h1{font-family:'Outfit',sans-serif;font-size:clamp(44px,5.5vw,74px);font-weight:600;color:#fff;letter-spacing:-.026em;line-height:1.05;opacity:0;transform:translateX(-50px);animation:slideIn .8s cubic-bezier(0.16,1,0.3,1) .3s forwards;}
+.em-hero__h1 em{font-style:normal;color:#6CC04A;}
+.em-hero__sub{font-size:17px;color:rgba(255,255,255,.68);line-height:1.72;max-width:500px;opacity:0;transform:translateX(-40px);animation:slideIn .8s cubic-bezier(0.16,1,0.3,1) .45s forwards;}
+.em-hero__ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center;opacity:0;transform:translateX(-30px);animation:slideIn .8s cubic-bezier(0.16,1,0.3,1) .6s forwards;}
+.em-hero__note{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.5);opacity:0;transform:translateX(-20px);animation:slideIn .8s cubic-bezier(0.16,1,0.3,1) .75s forwards;}
+.em-hero__chk{width:18px;height:18px;flex-shrink:0;background:rgba(108,192,74,.14);border:1px solid #6CC04A;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.em-hero__fade{position:absolute;bottom:0;left:0;right:0;height:45px;background:linear-gradient(to bottom,transparent,var(--bg-dark));z-index:3;pointer-events:none;}
+@media(max-width:1024px){.em-hero__i{padding:80px 40px 80px calc(40px + 8%);}}
+@media(max-width:640px){.em-hero__i{padding:64px 24px;}.em-hero__h1{font-size:40px;}.em-hero__ctas{flex-direction:column;}.em-btn,.em-ghost{width:100%;justify-content:center;}}
+
+/* ════════ STATS STRIP ════════ */
+.em-stats{background:var(--bg-dark);border-bottom:1px solid rgba(108,192,74,.1);padding:0;}
+.em-stats__grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.em-stat-card{padding:32px 28px;text-align:center;border-right:1px solid rgba(255,255,255,.06);cursor:pointer;transition:background .25s;position:relative;overflow:hidden;}
+.em-stat-card:last-child{border-right:none;}
+.em-stat-card:hover{background:rgba(255,255,255,.03);}
+.em-stat-card__val{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:800;color:#6CC04A;letter-spacing:-.03em;line-height:1;margin-bottom:8px;}
+.em-stat-card__lbl{font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:8px;}
+.em-stat-card__toggle{display:flex;align-items:center;justify-content:center;gap:6px;font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;color:rgba(108,192,74,.6);letter-spacing:.05em;text-transform:uppercase;transition:color .2s;}
+.em-stat-card:hover .em-stat-card__toggle{color:#6CC04A;}
+.em-stat-card__arrow{display:inline-block;transition:transform .3s ease;font-size:8px;}
+.em-stat-card.open .em-stat-card__arrow{transform:rotate(180deg);}
+.em-stat-card__detail{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease,opacity .3s ease;opacity:0;padding:0 8px;}
+.em-stat-card.open .em-stat-card__detail{max-height:100px;padding:14px 8px 4px;opacity:1;}
+.em-stat-card__detail p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6;}
+.em-stat-card::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:#6CC04A;transition:width .3s ease;}
+.em-stat-card.open::after{width:60%;}
+@media(max-width:1024px){.em-stats__grid{grid-template-columns:repeat(2,1fr);}.em-stat-card:nth-child(2){border-right:none;}.em-stat-card:nth-child(3),.em-stat-card:nth-child(4){border-top:1px solid rgba(255,255,255,.06);}}
+@media(max-width:480px){.em-stats__grid{grid-template-columns:1fr;}.em-stat-card{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.06);}.em-stat-card:last-child{border-bottom:none;}}
+
+/* ════════ EVENT STRIP ════════ */
+.em-event{background:#fff;border-bottom:1px solid var(--card-b);padding:20px 60px;box-shadow:0 2px 12px rgba(13,26,43,.06);}
+.em-event__i{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;}
+.em-event__label{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green-d);display:flex;align-items:center;gap:8px;}
+.em-event__sep{width:1px;height:28px;background:var(--card-b);flex-shrink:0;}
+.em-event__name{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;color:var(--text-1);margin-bottom:2px;}
+.em-event__meta{font-size:13px;color:var(--text-3);}
+.em-event__meta a{color:var(--green-d);text-decoration:none;font-weight:600;}
+@media(max-width:640px){.em-event{padding:18px 24px;}.em-event__sep{display:none;}.em-event__i{gap:16px;}}
+
+/* ════════ SERVICES ════════ */
+.em-svc{background:var(--bg-white);padding:100px 50px;}
+.em-svc__i{max-width:1280px;margin:0 auto;}
+.em-svc__hdr{text-align:center;margin-bottom:64px;}
+.em-svc__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.em-svc-card{background:var(--card-bg);border:1px solid var(--card-b);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s,box-shadow .25s,border-color .25s;}
+.em-svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--green-b);}
+.em-svc-card__img-wrap{position:relative;flex-shrink:0;width:100%;height:270px;overflow:hidden!important;border-radius:0!important;}
+.em-svc-card__img-wrap img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;border-radius:0!important;transition:transform .4s ease;}
+.em-svc-card:hover .em-svc-card__img-wrap img{transform:scale(1.04);}
+.em-svc-card__num{position:absolute;top:12px;left:14px;z-index:1;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;color:#fff;letter-spacing:.06em;background:rgba(13,26,43,.65);border:1px solid rgba(255,255,255,.25);border-radius:var(--r-xs);padding:4px 10px;backdrop-filter:blur(6px);}
+.em-svc-card__body{padding:28px 28px 32px;display:flex;flex-direction:column;gap:12px;flex:1;}
+.em-svc-card__ico{width:42px;height:42px;background:var(--green-t);border:1px solid var(--green-b);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.em-svc-card__title{font-family:'Outfit',sans-serif;font-size:18px;font-weight:700;color:var(--text-1);letter-spacing:-.01em;line-height:1.25;}
+.em-svc-card__text{font-size:14.5px;color:var(--text-2);line-height:1.72;flex:1;}
+@media(max-width:1024px){.em-svc{padding:80px 40px;}}
+@media(max-width:640px){.em-svc{padding:64px 24px;}.em-svc__grid{grid-template-columns:1fr;}.em-svc-card__img-wrap{height:200px;}}
+
+/* ════════ HOW WE ENGAGE ════════ */
+.em-engage{background:var(--bg-dark);padding:100px 60px;position:relative;overflow:hidden;}
+.em-engage::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(108,192,74,.04) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(30,58,92,.4) 0%,transparent 50%);}
+.em-engage__i{max-width:1280px;margin:0 auto;position:relative;}
+.em-engage__hdr{text-align:center;margin-bottom:64px;}
+.em-engage__hdr .em-h2{color:#fff;}
+.em-engage__hdr .em-sub{color:rgba(255,255,255,.55);}
+.em-engage__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.em-engage__steps{display:flex;flex-direction:column;gap:0;}
+.em-engage__step{display:flex;gap:20px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+.em-engage__step:last-child{border-bottom:none;}
+.em-engage__num{width:44px;height:44px;min-width:44px;background:rgba(108,192,74,.1);border:1px solid rgba(108,192,74,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:700;font-size:14px;color:#6CC04A;}
+.em-engage__step h4{font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;}
+.em-engage__step p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.65;}
+.em-engage__depth{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-xl);padding:36px 32px;}
+.em-engage__depth h3{font-family:'Outfit',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:28px;}
+.em-engage__row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.em-engage__row:last-child{border-bottom:none;}
+.em-engage__dot{width:10px;height:10px;border-radius:50%;min-width:10px;}
+.em-engage__dot--green{background:#6CC04A;}
+.em-engage__dot--mid{background:#3D5A7A;}
+.em-engage__dot--navy{background:#1E3A5C;}
+.em-engage__role{font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;color:rgba(255,255,255,.8);min-width:130px;}
+.em-engage__desc{font-size:12px;color:rgba(255,255,255,.4);line-height:1.5;}
+@media(max-width:1024px){.em-engage{padding:80px 40px;}.em-engage__grid{grid-template-columns:1fr;gap:40px;}}
+@media(max-width:640px){.em-engage{padding:64px 24px;}}
+
+/* ════════ PROOF ════════ */
+.em-proof{background:var(--bg-white);padding:100px 60px;}
+.em-proof__i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.em-proof__h2{font-family:'Outfit',sans-serif;font-size:clamp(32px,4vw,52px);font-weight:800;color:var(--text-1);letter-spacing:-.025em;line-height:1.1;margin:16px 0 22px;}
+.em-proof__body{font-size:16px;color:var(--text-2);line-height:1.72;margin-bottom:36px;}
+.em-proof__bullets{display:flex;flex-direction:column;gap:14px;list-style:none;}
+.em-proof__bullet{display:flex;align-items:flex-start;gap:13px;}
+.em-proof__bico{width:20px;height:20px;flex-shrink:0;margin-top:2px;background:var(--green-t);border:1px solid var(--green-b);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.em-proof__bullet p{font-size:15px;color:var(--text-2);line-height:1.55;}
+.em-proof__card{border-radius:var(--r-xl);overflow:hidden;position:relative;background:linear-gradient(rgba(13,26,43,.82),rgba(13,26,43,.82)),url('http://emtech-engineering.local/wp-content/uploads/2026/05/DSC01209-2-p-3200-scaled.jpg') center/cover no-repeat;}
+.em-proof__card-inner{padding:40px;position:relative;z-index:1;}
+.em-proof__card-hdr{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:28px;display:flex;align-items:center;gap:9px;}
+.em-proof__stats{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:var(--r-xs);overflow:hidden;}
+.em-stat{background:rgba(255,255,255,.06);padding:26px 22px;transition:background .2s;}
+.em-stat:hover{background:rgba(255,255,255,.1);}
+.em-stat__num{font-family:'Outfit',sans-serif;font-size:clamp(28px,3vw,40px);font-weight:800;color:#6CC04A;letter-spacing:-.03em;line-height:1;margin-bottom:7px;}
+.em-stat__lbl{font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.42);padding-bottom:12px;border-bottom:2px solid rgba(108,192,74,.3);display:inline-block;}
+@media(max-width:1024px){.em-proof{padding:80px 40px;}.em-proof__i{grid-template-columns:1fr;gap:56px;}}
+@media(max-width:640px){.em-proof{padding:64px 24px;}.em-proof__card-inner{padding:28px;}}
+
+/* ════════ CONTACT ════════ */
+.em-contact{background:var(--bg-soft);padding:100px 60px;}
+.em-contact__i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start;}
+.em-contact__left{position:sticky;top:90px;}
+.em-contact__h2{font-family:'Outfit',sans-serif;font-size:clamp(30px,3.8vw,48px);font-weight:800;color:var(--text-1);letter-spacing:-.025em;line-height:1.1;margin:16px 0 18px;}
+.em-contact__h2 em{font-style:normal;color:var(--green);}
+.em-contact__sub{font-size:16px;color:var(--text-2);line-height:1.72;margin-bottom:36px;}
+.em-contact__info{display:flex;flex-direction:column;gap:18px;}
+.em-contact__info-item{display:flex;align-items:flex-start;gap:14px;}
+.em-contact__info-ico{width:36px;height:36px;background:var(--green-t);border:1px solid var(--green-b);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.em-contact__info-lbl{font-family:'Outfit',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:3px;}
+.em-contact__info-val{font-size:14px;color:var(--text-2);line-height:1.5;}
+.em-contact__form-card{background:var(--card-bg);border:1px solid var(--card-b);border-radius:var(--r-xl);padding:48px;box-shadow:var(--shadow-lg);}
+.em-intent-wrap{margin-bottom:28px;}
+.em-intent-label{font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;color:var(--text-1);margin-bottom:12px;display:block;}
+.em-intent-label span{color:#C0392B;}
+.em-intent-sel{width:100%;padding:14px 44px 14px 16px;background:var(--bg-soft);border:2px solid var(--card-b);border-radius:var(--r-xs);font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:500;color:var(--text-1);cursor:pointer;outline:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%236B859F' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;transition:border-color .2s;}
+.em-intent-sel:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(108,192,74,.15);}
+.em-form-divider{height:1px;background:var(--bg-tint);margin:24px 0;display:none;}
+.em-form-divider.show{display:block;}
+.em-fg{display:none;animation:up .25s ease forwards;}
+.em-fg.show{display:block;}
+.em-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.em-f{display:flex;flex-direction:column;gap:7px;}
+.em-f.span2{grid-column:1/-1;}
+.em-flbl{font-family:'Outfit',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);}
+.em-fi,.em-fsel,.em-fta{background:var(--bg-soft);border:1.5px solid var(--card-b);border-radius:var(--r-xs);padding:13px 16px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--text-1);outline:none;width:100%;transition:border-color .2s;-webkit-appearance:none;}
+.em-fi::placeholder,.em-fta::placeholder{color:var(--text-3);opacity:.65;}
+.em-fi:focus,.em-fsel:focus,.em-fta:focus{border-color:var(--green);background:#fff;box-shadow:0 0 0 3px rgba(108,192,74,.12);}
+.em-fsel{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B859F' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:var(--bg-soft);padding-right:36px;}
+.em-fta{resize:vertical;min-height:100px;line-height:1.6;}
+.em-privacy{background:var(--bg-soft);border:1px solid var(--card-b);border-radius:var(--r-xs);padding:14px 16px;margin-top:20px;font-size:12.5px;color:var(--text-3);line-height:1.6;display:none;}
+.em-privacy.show{display:block;}
+.em-privacy strong{color:var(--text-2);}
+.em-fsubmit{width:100%;padding:16px 24px;border:none;border-radius:var(--r-sm);cursor:pointer;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;background:var(--green);color:var(--green-btn);transition:background .2s,transform .15s;display:none;margin-top:16px;}
+.em-fsubmit.show{display:block;}
+.em-fsubmit:hover{background:#7DD65A;transform:translateY(-2px);box-shadow:0 8px 28px rgba(108,192,74,.28);}
+.em-fsubmit:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+.em-success{display:none;text-align:center;padding:50px 24px;}
+.em-success.show{display:block;animation:up .35s ease forwards;}
+.em-success__ico{width:64px;height:64px;border-radius:50%;background:var(--green-t);border:2px solid var(--green-b);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+.em-success h3{font-family:'Outfit',sans-serif;font-size:22px;font-weight:800;color:var(--text-1);margin-bottom:8px;}
+.em-success p{font-size:15px;color:var(--text-2);line-height:1.65;max-width:380px;margin:0 auto;}
+@media(max-width:1024px){.em-contact{padding:80px 40px;}.em-contact__i{grid-template-columns:1fr;gap:48px;}.em-contact__left{position:static;}}
+@media(max-width:768px){.em-contact{padding:64px 24px;}.em-contact__form-card{padding:32px 24px;}.em-form-grid{grid-template-columns:1fr;}}
+
+/* ════════ QR ════════ */
+.em-qr{background:var(--bg-tint);padding:80px 60px;}
+.em-qr__i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.em-qr__h2{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--text-1);letter-spacing:-.025em;line-height:1.15;margin:14px 0 14px;}
+.em-qr__sub{font-size:15px;color:var(--text-2);line-height:1.7;margin-bottom:24px;}
+.em-qr__url{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--card-b);border-radius:var(--r-xs);padding:11px 16px;margin-bottom:20px;font-family:'Outfit',sans-serif;font-size:12.5px;font-weight:600;color:var(--navy-mid);word-break:break-all;}
+.em-qr__dl{display:inline-flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--green-d);background:var(--green-t);border:1px solid var(--green-b);border-radius:var(--r-sm);padding:10px 18px;cursor:pointer;text-decoration:none;transition:background .2s;}
+.em-qr__dl:hover{background:#ddf2cc;}
+.em-qr__right{display:flex;justify-content:center;}
+.em-qr__box{background:#fff;border:1px solid var(--card-b);border-radius:var(--r-md);padding:28px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;align-items:center;gap:14px;}
+#em-qrcode canvas,#em-qrcode img{border-radius:var(--r-xs);display:block;}
+.em-qr__lbl{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);}
+@media(max-width:768px){.em-qr{padding:64px 24px;}.em-qr__i{grid-template-columns:1fr;gap:40px;}}
+
+/* ════════ FOOTER ════════ */
+.em-footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.05);padding:60px 60px 36px;}
+.em-footer__i{max-width:1280px;margin:0 auto;}
+.em-footer__top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:28px;}
+.em-footer__tag{font-size:13.5px;color:rgba(255,255,255,.38);line-height:1.65;max-width:210px;margin-top:14px;}
+.em-footer__col-t{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:18px;}
+.em-footer__links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.em-footer__links a{font-size:14px;color:rgba(255,255,255,.52);text-decoration:none;transition:color .2s;}
+.em-footer__links a:hover{color:#fff;}
+.em-footer__addr{font-size:13.5px;color:rgba(255,255,255,.4);line-height:1.75;font-style:normal;}
+.em-footer__addr a{color:rgba(255,255,255,.52);text-decoration:none;}
+.em-footer__addr a:hover{color:#6CC04A;}
+.em-footer__bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.em-footer__copy{font-size:12.5px;color:rgba(255,255,255,.22);}
+.em-footer__legal{list-style:none;display:flex;gap:20px;}
+.em-footer__legal a{font-size:12px;color:rgba(255,255,255,.22);text-decoration:none;}
+@media(max-width:1024px){.em-footer{padding:48px 40px 28px;}.em-footer__top{grid-template-columns:1fr 1fr;gap:36px;}}
+@media(max-width:640px){.em-footer{padding:40px 24px 24px;}.em-footer__top{grid-template-columns:1fr;}.em-footer__bot{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+<main>
+
+<!-- ════════ NAV ════════ -->
+<nav class="em-nav">
+  <div class="em-nav__i">
+    <a href="#" style="display:flex;align-items:center;">
+      <img src="http://emtech-engineering.local/wp-content/uploads/2026/05/Black-Parts-Changed-to-White-Design-1.png" alt="EMTECH Engineering" style="height:36px;width:auto;display:block;max-width:none;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <span style="display:none;font-family:'Outfit',sans-serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:-.02em;">em<span style="color:#6CC04A;">tech</span></span>
+    </a>
+    <div class="em-nav__event"><span class="em-pip"></span><span><strong>Robotics Summit &amp; Expo 2026</strong> &nbsp;·&nbsp; May 27–28</span></div>
+    <a href="#contact" class="em-btn" style="padding:10px 22px;font-size:13.5px;">Talk to Us</a>
+  </div>
+</nav>
+
+<!-- ════════ HERO — Video background, lighter overlay ════════ -->
+<section class="em-hero">
+  <div class="em-hero__vw">
+    <video class="em-hero__vid" autoplay muted loop playsinline preload="auto" poster="hero-still-1.jpg">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="em-hero__ov"></div>
+  </div>
+  <div class="em-hero__i">
+    <div class="em-hero__left">
+      <div class="em-badge em-badge--dark em-hero__badge-anim"><span class="em-badge__dot"></span>Embedded Engineering Partner</div>
+      <h1 class="em-hero__h1">Engineering Execution<br><em>At Scale.</em></h1>
+      <p class="em-hero__sub">Your embedded engineering partner for robotics, automation, and advanced manufacturing. We help companies scale their engineering capacity — from R&D through full production — without the overhead of full-time hires.</p>
+      <div class="em-hero__ctas">
+        <a href="#contact" class="em-btn">Talk to Us</a>
+        <a href="#services" class="em-ghost">View Our Services <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 6.5H10.5M10.5 6.5L7 3M10.5 6.5L7 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="em-hero__note"><span class="em-hero__chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#6CC04A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>We'll confirm fit, timeline &amp; next steps within 24 hours</div>
+    </div>
+  </div>
+  <div class="em-hero__fade"></div>
+</section>
+
+<!-- ════════ STATS STRIP — Expandable cards ════════ -->
+<section class="em-stats">
+  <div class="em-stats__grid">
+    <div class="em-stat-card" onclick="this.classList.toggle('open')">
+      <div class="em-stat-card__val">100K+</div>
+      <div class="em-stat-card__lbl">Annual Field Hours</div>
+      <div class="em-stat-card__toggle">Details <span class="em-stat-card__arrow">▼</span></div>
+      <div class="em-stat-card__detail"><p>Over 100,000 hands-on embedded hours delivered annually across client projects in 2026.</p></div>
+    </div>
+    <div class="em-stat-card" onclick="this.classList.toggle('open')">
+      <div class="em-stat-card__val">100%</div>
+      <div class="em-stat-card__lbl">On-Time Delivery</div>
+      <div class="em-stat-card__toggle">Details <span class="em-stat-card__arrow">▼</span></div>
+      <div class="em-stat-card__detail"><p>Our deployment deadlines have always been met — across every active project and every client.</p></div>
+    </div>
+    <div class="em-stat-card" onclick="this.classList.toggle('open')">
+      <div class="em-stat-card__val">&lt;24hr</div>
+      <div class="em-stat-card__lbl">Response Time</div>
+      <div class="em-stat-card__toggle">Details <span class="em-stat-card__arrow">▼</span></div>
+      <div class="em-stat-card__detail"><p>Field support commitment — engineering attention within 24 hours, every time.</p></div>
+    </div>
+    <div class="em-stat-card" onclick="this.classList.toggle('open')">
+      <div class="em-stat-card__val">50 States + EU</div>
+      <div class="em-stat-card__lbl">Coverage Area</div>
+      <div class="em-stat-card__toggle">Details <span class="em-stat-card__arrow">▼</span></div>
+      <div class="em-stat-card__detail"><p>Technical support capabilities spanning all 50 U.S. states and multiple European markets.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ EVENT STRIP ════════ -->
+<div class="em-event">
+  <div class="em-event__i">
+    <span class="em-event__label"><span class="em-pip"></span>Now Attending</span>
+    <span class="em-event__sep"></span>
+    <div><div class="em-event__name">Robotics Summit &amp; Expo 2026</div><div class="em-event__meta">May 27–28, Boston &nbsp;·&nbsp; <a href="https://www.roboticssummit.com" target="_blank" rel="noopener">roboticssummit.com</a></div></div>
+    <span class="em-event__sep"></span>
+    <a href="#contact" class="em-btn" style="padding:10px 22px;font-size:13.5px;">Connect With Us</a>
+  </div>
+</div>
+
+<!-- ════════ SERVICES — Reframed with EEP language ════════ -->
+<section class="em-svc" id="services">
+  <div class="em-svc__i">
+    <div class="em-svc__hdr">
+      <div class="em-badge"><span class="em-badge__dot"></span>What We Do</div>
+      <h2 class="em-h2">Embedded Engineering Support.<br><em>Full Lifecycle.</em></h2>
+      <p class="em-sub">From R&D through deployment — hands-on technician support backed by senior engineering depth, embedded directly in your environment, accountable to your KPIs.</p>
+    </div>
+    <div class="em-svc__grid">
+      <article class="em-svc-card"><div class="em-svc-card__img-wrap"><img loading="lazy" alt="R&D and lab support" src="http://emtech-engineering.local/wp-content/uploads/2026/05/emtech-specialty-1-Optimized-p-1080.jpeg"><span class="em-svc-card__num">01</span></div><div class="em-svc-card__body"><div class="em-svc-card__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 class="em-svc-card__title">R&amp;D &amp; Lab Support</h3><p class="em-svc-card__text">Prototype assembly, HIL rigs, and test automation — built to iterate fast and transfer cleanly into production environments. Embedded lab teams that keep your R&amp;D moving.</p></div></article>
+      <article class="em-svc-card"><div class="em-svc-card__img-wrap"><img loading="lazy" alt="Testing and validation" src="http://emtech-engineering.local/wp-content/uploads/2026/05/DSC01266-2-p-3200-scaled.jpg"><span class="em-svc-card__num">02</span></div><div class="em-svc-card__body"><div class="em-svc-card__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 class="em-svc-card__title">Testing &amp; Validation</h3><p class="em-svc-card__text">End-to-end test lifecycle support — from test plan development through root-cause analysis. Mechanical, electrical, firmware, and system-level performance evaluation.</p></div></article>
+      <article class="em-svc-card"><div class="em-svc-card__img-wrap"><img loading="lazy" alt="EOAT and mechanical engineering" src="http://emtech-engineering.local/wp-content/uploads/2026/05/emtech-specialty-3-Optimized-p-1080.jpeg"><span class="em-svc-card__num">03</span></div><div class="em-svc-card__body"><div class="em-svc-card__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#4A8A2E" stroke-width="1.6"/><path d="M19.07 4.93l-1.42 1.42M6.34 17.66l-1.41 1.41M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M12 2v2M12 20v2M2 12h2M20 12h2" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round"/></svg></div><h3 class="em-svc-card__title">EOAT &amp; Mechanical Engineering</h3><p class="em-svc-card__text">Custom end-of-arm tooling, gripper design, mechanical integration, and workcell commissioning — engineered to your robot, your payload, and your cycle-time requirements.</p></div></article>
+      <article class="em-svc-card"><div class="em-svc-card__img-wrap"><img loading="lazy" alt="Field deployment" src="http://emtech-engineering.local/wp-content/uploads/2026/05/DSC01116-2-p-3200-scaled.jpg"><span class="em-svc-card__num">04</span></div><div class="em-svc-card__body"><div class="em-svc-card__ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12h6v10" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3 class="em-svc-card__title">Field Deployment &amp; Live Ops</h3><p class="em-svc-card__text">Multi-site commissioning, ramp support, and SLA-backed steady-state operations. From first power-on to full throughput across all 50 states and Europe.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ HOW WE ENGAGE — Reworked per Desmond ════════ -->
+<section class="em-engage">
+  <div class="em-engage__i">
+    <div class="em-engage__hdr">
+      <div class="em-badge em-badge--dark"><span class="em-badge__dot"></span>How We Work</div>
+      <h2 class="em-h2">Start With a <em>Conversation.</em></h2>
+      <p class="em-sub">We don't force every engagement through a rigid pipeline. Some projects need a quick scoping call; others need a full-scale embedded team. Here's what working with us looks like.</p>
+    </div>
+    <div class="em-engage__grid">
+      <div class="em-engage__steps">
+        <div class="em-engage__step"><div class="em-engage__num">01</div><div><h4>Initial Conversation</h4><p>Tell us where you are in your project. No forms, no generic pitch — just a direct conversation about your needs and whether we're the right fit.</p></div></div>
+        <div class="em-engage__step"><div class="em-engage__num">02</div><div><h4>Scope &amp; Team Design</h4><p>We map the right team structure, skill mix, and milestones. You review and approve before anything begins.</p></div></div>
+        <div class="em-engage__step"><div class="em-engage__num">03</div><div><h4>Embedded Execution</h4><p>Our people work inside your environment — on your tools, your schedule, your KPIs. Fully integrated, fully accountable.</p></div></div>
+        <div class="em-engage__step"><div class="em-engage__num">04</div><div><h4>Handoff &amp; Ongoing Support</h4><p>Clean documentation, knowledge transfer, and the option for continued support — so your team owns everything we built.</p></div></div>
+      </div>
+      <div class="em-engage__depth">
+        <h3>The Range of Our Team</h3>
+        <div class="em-engage__row"><span class="em-engage__dot em-engage__dot--green"></span><span class="em-engage__role">Field Technicians</span><span class="em-engage__desc">Hands-on builds, installs, commissioning, calibration, and daily operations</span></div>
+        <div class="em-engage__row"><span class="em-engage__dot em-engage__dot--mid"></span><span class="em-engage__role">Specialized Techs</span><span class="em-engage__desc">Lab operations, data collection, 3D printing, test fixtures, and equipment management</span></div>
+        <div class="em-engage__row"><span class="em-engage__dot em-engage__dot--mid"></span><span class="em-engage__role">Engineers</span><span class="em-engage__desc">ME, EE, firmware, controls, CAD, test plan design, and system integration</span></div>
+        <div class="em-engage__row"><span class="em-engage__dot em-engage__dot--navy"></span><span class="em-engage__role">Senior Engineers</span><span class="em-engage__desc">Architecture decisions, failure analysis, and program-level technical leadership</span></div>
+        <div class="em-engage__row"><span class="em-engage__dot em-engage__dot--navy"></span><span class="em-engage__role">Program Leads</span><span class="em-engage__desc">Scope management, milestone tracking, and multi-site oversight</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PROOF — EEP positioning ════════ -->
+<section class="em-proof">
+  <div class="em-proof__i">
+    <div>
+      <div class="em-badge"><span class="em-badge__dot"></span>Your Embedded Engineering Partner</div>
+      <h2 class="em-proof__h2">Scale Your Engineering Capacity.<br><em>Without the Overhead.</em></h2>
+      <p class="em-proof__body">We're not a traditional engineering firm — and we're not a staffing agency. Emtech embeds specialized technical teams directly in your environment, integrated into your workflow, accountable to your outcomes.</p>
+      <ul class="em-proof__bullets">
+        <li class="em-proof__bullet"><div class="em-proof__bico"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Technology-agnostic — we recommend what's right, not what earns us a margin.</p></li>
+        <li class="em-proof__bullet"><div class="em-proof__bico"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Embedded in your environment — we're in the cell with you, not watching from a dashboard.</p></li>
+        <li class="em-proof__bullet"><div class="em-proof__bico"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>Same execution depth at 1 site or 20 — we scale with the project.</p></li>
+        <li class="em-proof__bullet"><div class="em-proof__bico"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4.2 7.2L8 3" stroke="#4A8A2E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p>R&amp;D through live ops — we own the outcome, not just the kickoff.</p></li>
+      </ul>
+    </div>
+    <div class="em-proof__card"><div class="em-proof__card-inner">
+      <div class="em-proof__card-hdr"><span style="width:6px;height:6px;border-radius:50%;background:#6CC04A;display:inline-block;"></span>2026 Execution Results</div>
+      <div class="em-proof__stats">
+        <div class="em-stat"><div class="em-stat__num">100K+</div><span class="em-stat__lbl">Annual Field Hours</span></div>
+        <div class="em-stat"><div class="em-stat__num">100%</div><span class="em-stat__lbl">On-Time Delivery</span></div>
+        <div class="em-stat"><div class="em-stat__num">&lt;24hr</div><span class="em-stat__lbl">Response Time</span></div>
+        <div class="em-stat"><div class="em-stat__num">50 States + EU</div><span class="em-stat__lbl">Coverage Area</span></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT ════════ -->
+<section class="em-contact" id="contact">
+  <div class="em-contact__i">
+    <div class="em-contact__left">
+      <div class="em-badge"><span class="em-badge__dot"></span>Get In Touch</div>
+      <h2 class="em-contact__h2">Let's Start the<br><em>Conversation.</em></h2>
+      <p class="em-contact__sub">Tell us where you are in your project and we'll come prepared — with the right questions, the right context, and a clear picture of what working together looks like.</p>
+      <address class="em-contact__info">
+        <div class="em-contact__info-item"><div class="em-contact__info-ico"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5C6.1 1.5 3.75 3.85 3.75 6.75c0 4.22 5.25 9.75 5.25 9.75s5.25-5.53 5.25-9.75C14.25 3.85 11.9 1.5 9 1.5zm0 7.13a2.38 2.38 0 110-4.76 2.38 2.38 0 010 4.76z" stroke="#4A8A2E" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="em-contact__info-lbl">Address</div><div class="em-contact__info-val">635 W Reynolds Ave<br>Centralia, WA 98531</div></div></div>
+        <div class="em-contact__info-item"><div class="em-contact__info-ico"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M3.5 3h3l1.5 3.75-1.88 1.13a9.75 9.75 0 004.5 4.5L12.25 10.5 16 12v3a1.5 1.5 0 01-1.5 1.5A12 12 0 012 4.5 1.5 1.5 0 013.5 3z" stroke="#4A8A2E" stroke-width="1.4" stroke-linejoin="round"/></svg></div><div><div class="em-contact__info-lbl">Phone</div><div class="em-contact__info-val"><a href="tel:3607484891" style="color:var(--text-2);text-decoration:none;">360-748-4891</a></div></div></div>
+        <div class="em-contact__info-item"><div class="em-contact__info-ico"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7.5" stroke="#4A8A2E" stroke-width="1.4"/><path d="M9 5.25V9.75L11.25 12" stroke="#4A8A2E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="em-contact__info-lbl">Hours</div><div class="em-contact__info-val">Mon – Fri: 7:30am – 4:00pm PT</div></div></div>
+        <div class="em-contact__info-item"><div class="em-contact__info-ico"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="7.5" r="3" stroke="#4A8A2E" stroke-width="1.4"/><path d="M2.25 15.75c0-4.14 3.02-6.75 6.75-6.75s6.75 2.61 6.75 6.75" stroke="#4A8A2E" stroke-width="1.4" stroke-linecap="round"/></svg></div><div><div class="em-contact__info-lbl">Response Time</div><div class="em-contact__info-val">Fit, timeline &amp; next steps<br>within 24 business hours</div></div></div>
+      </address>
+    </div>
+    <div class="em-contact__form-card">
+      <div class="em-success" id="em-success"><div class="em-success__ico"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 14L11 20L23 8" stroke="#4A8A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Thanks — we'll be in touch.</h3><p>Your message came through. A member of the Emtech team will reach out within 24 business hours.</p></div>
+      <form id="em-form" onsubmit="emSubmit(event)" novalidate>
+        <input type="hidden" name="form_type" value=""><input type="hidden" name="notify_email" value=""><input type="hidden" name="source" value="Robotics Summit Landing Page 2026">
+        <div class="em-intent-wrap"><label class="em-intent-label" for="em-intent">How Can We Help You?<span>*</span></label><select class="em-intent-sel" id="em-intent" name="intent" onchange="emRoute(this.value)" required><option value="" disabled selected>Select...</option><option value="client">I'm interested in working together on a project</option><option value="intern">I'm a student or university representative</option><option value="career">I'm interested in joining the team</option></select></div>
+        <div class="em-form-divider" id="em-divider"></div>
+        <div class="em-fg" id="em-fg-shared"><div class="em-form-grid"><div class="em-f"><label class="em-flbl">First Name</label><input class="em-fi" type="text" name="first_name" placeholder="Jane" required></div><div class="em-f"><label class="em-flbl">Last Name</label><input class="em-fi" type="text" name="last_name" placeholder="Smith" required></div><div class="em-f"><label class="em-flbl">Email</label><input class="em-fi" type="email" name="email" placeholder="jane@company.com" required></div><div class="em-f"><label class="em-flbl">Phone (Optional)</label><input class="em-fi" type="tel" name="phone" placeholder="(555) 000-0000"></div></div></div>
+        <div class="em-fg" id="em-fg-client"><div class="em-form-grid"><div class="em-f"><label class="em-flbl">Company</label><input class="em-fi" name="company" placeholder="Acme Robotics"></div><div class="em-f"><label class="em-flbl">Website</label><input class="em-fi" name="website" placeholder="www.company.com"></div><div class="em-f"><label class="em-flbl">Project Type</label><select class="em-fsel" name="project_type"><option value="" disabled selected>Select...</option><option>New Deployment</option><option>Project Expansion</option><option>R&D Support</option><option>Testing &amp; Validation</option><option>EOAT Engineering</option><option>Not Sure — Let's Talk</option></select></div><div class="em-f"><label class="em-flbl">Timeline</label><select class="em-fsel" name="timeline"><option value="" disabled selected>Select...</option><option>Immediately</option><option>1–3 Months</option><option>3–6 Months</option><option>Exploring Options</option></select></div><div class="em-f span2"><label class="em-flbl">Tell Us About Your Project</label><textarea class="em-fta" name="description" placeholder="Brief overview of your project and what you need..."></textarea></div></div></div>
+        <div class="em-fg" id="em-fg-intern"><div class="em-form-grid"><div class="em-f"><label class="em-flbl">School</label><input class="em-fi" name="school" placeholder="University of Washington"></div><div class="em-f"><label class="em-flbl">Degree Program</label><input class="em-fi" name="degree" placeholder="B.S. Mechanical Engineering"></div><div class="em-f"><label class="em-flbl">Expected Graduation</label><input class="em-fi" name="graduation" placeholder="May 2027"></div><div class="em-f"><label class="em-flbl">Internship Term</label><select class="em-fsel" name="term"><option value="" disabled selected>Select...</option><option>Summer 2026</option><option>Fall 2026</option><option>Spring 2027</option><option>Other</option></select></div><div class="em-f span2"><label class="em-flbl">Area of Interest</label><select class="em-fsel" name="area_of_interest"><option value="" disabled selected>Select...</option><option>Robotics Engineering</option><option>Mechanical Engineering</option><option>Electrical Engineering</option><option>Software / Test Engineering</option><option>Field Operations</option><option>Other</option></select></div></div></div>
+        <div class="em-fg" id="em-fg-career"><div class="em-form-grid"><div class="em-f"><label class="em-flbl">Experience Level</label><select class="em-fsel" name="experience_level"><option value="" disabled selected>Select...</option><option>Entry Level (0–2 yrs)</option><option>Mid Level (2–5 yrs)</option><option>Senior (5–10 yrs)</option><option>Lead / Principal (10+ yrs)</option></select></div><div class="em-f"><label class="em-flbl">Role Preference</label><select class="em-fsel" name="role_preference"><option value="" disabled selected>Select...</option><option>Systems Integration</option><option>Test Engineering</option><option>EOAT / Mechanical</option><option>Field Deployment</option><option>R&D / Lab Support</option><option>Engineering Management</option><option>Other</option></select></div><div class="em-f"><label class="em-flbl">Location</label><input class="em-fi" name="location" placeholder="Seattle, WA"></div><div class="em-f"><label class="em-flbl">LinkedIn URL</label><input class="em-fi" name="linkedin" placeholder="linkedin.com/in/yourname"></div><div class="em-f span2"><label class="em-flbl">Anything else?</label><textarea class="em-fta" name="notes" placeholder="What you're looking for, what you've built..."></textarea></div></div></div>
+        <div class="em-privacy" id="em-privacy"><strong>We Value Your Privacy.</strong> Information provided is used solely by EMTECH Engineering to respond to your inquiry. We do not sell your information.</div>
+        <button class="em-fsubmit" id="em-submit" type="submit">Submit →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ QR CODE ════════ -->
+<section class="em-qr">
+  <div class="em-qr__i">
+    <div>
+      <div class="em-badge"><span class="em-badge__dot"></span>Scan to Connect</div>
+      <h2 class="em-qr__h2">One Scan.<br>Start the Conversation.</h2>
+      <p class="em-qr__sub">Scan to visit our landing page and connect with our team — no typing required.</p>
+      <div class="em-qr__url"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M6.67 2.67H2.67a.67.67 0 00-.67.66v4h1.33V4h3.34V2.67zm2.66 0V4h3.34v3.33H14V3.33a.67.67 0 00-.67-.66H9.33zM2 9.33v3.34c0 .36.3.66.67.66h4V12H4V9.33H2zm10.67 0V12H9.33v1.33h4a.67.67 0 00.67-.66V9.33h-1.33z" fill="#3D5A7A"/></svg>emtechengineering.com/events/robotics-summit-2026</div>
+      <a class="em-qr__dl" id="em-qr-download"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v7M7 9L4.5 6.5M7 9L9.5 6.5M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Print / Lanyard</a>
+    </div>
+    <div class="em-qr__right"><div class="em-qr__box"><div id="em-qrcode"></div><p class="em-qr__lbl">Scan with your phone camera</p></div></div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="em-footer">
+  <div class="em-footer__i">
+    <div class="em-footer__top">
+      <div>
+        <img src="http://emtech-engineering.local/wp-content/uploads/2026/05/Black-Parts-Changed-to-White-Design-1.png" alt="EMTECH Engineering" style="height:34px;width:auto;display:block;max-width:none;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <span style="display:none;font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-.02em;">em<span style="color:#6CC04A;">tech</span></span>
+        <p class="em-footer__tag">Your embedded engineering partner — from concept to steady-state production.</p>
+      </div>
+      <div><div class="em-footer__col-t">Services</div><ul class="em-footer__links"><li><a href="#services">R&amp;D &amp; Lab Support</a></li><li><a href="#services">Testing &amp; Validation</a></li><li><a href="#services">EOAT Engineering</a></li><li><a href="#services">Field Deployment</a></li></ul></div>
+      <div><div class="em-footer__col-t">Connect</div><ul class="em-footer__links"><li><a href="#contact">Industry Clients</a></li><li><a href="#contact">University / Interns</a></li><li><a href="#contact">Careers</a></li></ul></div>
+      <div><div class="em-footer__col-t">Contact</div><address class="em-footer__addr">635 W Reynolds Ave<br>Centralia, WA 98531<br><br><a href="tel:3607484891">360-748-4891</a><br>Mon – Fri: 7:30am – 4:00pm PT</address></div>
+    </div>
+    <div class="em-footer__bot"><p class="em-footer__copy">© 2026 EMTECH Engineering. All rights reserved.</p><ul class="em-footer__legal"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li></ul></div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+var LABELS={client:'Book a 20-Min Scoping Call →',intern:'Send My Application →',career:"Let's Talk →"};
+function emRoute(intent){['shared','client','intern','career'].forEach(function(g){var el=document.getElementById('em-fg-'+g);if(el)el.classList.remove('show');});var d=document.getElementById('em-divider'),p=document.getElementById('em-privacy'),s=document.getElementById('em-submit');if(!intent){d.classList.remove('show');p.classList.remove('show');s.classList.remove('show');return;}document.getElementById('em-fg-shared').classList.add('show');document.getElementById('em-fg-'+intent).classList.add('show');d.classList.add('show');p.classList.add('show');s.classList.add('show');s.textContent=LABELS[intent]||'Submit →';var f=document.getElementById('em-form');f.querySelector('[name="form_type"]').value=intent;f.querySelector('[name="notify_email"]').value=(intent==='client')?'clients@emtechengineering.com':'careers@emtechengineering.com';if(window.innerWidth<768){setTimeout(function(){document.getElementById('em-fg-shared').scrollIntoView({behavior:'smooth',block:'nearest'});},50);}}
+var GHL={client:'YOUR_GHL_CLIENT_WEBHOOK_URL',intern:'YOUR_GHL_CAREERS_WEBHOOK_URL',career:'YOUR_GHL_CAREERS_WEBHOOK_URL'};
+function emSubmit(e){e.preventDefault();var intent=document.getElementById('em-intent').value;var btn=document.getElementById('em-submit');var form=e.target;if(!intent){document.getElementById('em-intent').focus();return;}var data={page_url:window.location.href};new FormData(form).forEach(function(v,k){data[k]=v;});btn.disabled=true;btn.textContent='Sending…';fetch(GHL[intent],{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(function(){form.style.display='none';document.getElementById('em-success').classList.add('show');}).catch(function(){if(GHL[intent].indexOf('YOUR_')===0){form.style.display='none';document.getElementById('em-success').classList.add('show');}else{btn.disabled=false;btn.textContent=LABELS[intent];alert('Something went wrong — please try again or call 360-748-4891.');}});}
+document.addEventListener('DOMContentLoaded',function(){var c=document.getElementById('em-qrcode');if(c&&typeof QRCode!=='undefined'){new QRCode(c,{text:'https://www.emtechengineering.com/events/robotics-summit-2026',width:200,height:200,colorDark:'#0D1A2B',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.H});var dl=document.getElementById('em-qr-download');if(dl){dl.addEventListener('click',function(e){e.preventDefault();setTimeout(function(){var cv=c.querySelector('canvas');if(cv){var a=document.createElement('a');a.download='EMTECH-RoboticsSummit2026-QR.png';a.href=cv.toDataURL('image/png');a.click();}},120);});}}});
+</script>
+</body>
+</html>
