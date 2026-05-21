@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;scroll-padding-top:80px;}
@@ -212,19 +212,29 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1A2B;}
 @media(max-width:1024px){.em-contact{padding:80px 40px;}.em-contact__i{grid-template-columns:1fr;gap:48px;}.em-contact__left{position:static;}}
 @media(max-width:768px){.em-contact{padding:64px 24px;}.em-contact__form-card{padding:32px 24px;}.em-form-grid{grid-template-columns:1fr;}}
 
-/* ════════ QR ════════ */
-.em-qr{background:var(--bg-tint);padding:80px 60px;}
-.em-qr__i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-.em-qr__h2{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--text-1);letter-spacing:-.025em;line-height:1.15;margin:14px 0 14px;}
-.em-qr__sub{font-size:15px;color:var(--text-2);line-height:1.7;margin-bottom:24px;}
-.em-qr__url{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--card-b);border-radius:var(--r-xs);padding:11px 16px;margin-bottom:20px;font-family:'Outfit',sans-serif;font-size:12.5px;font-weight:600;color:var(--navy-mid);word-break:break-all;}
-.em-qr__dl{display:inline-flex;align-items:center;gap:8px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--green-d);background:var(--green-t);border:1px solid var(--green-b);border-radius:var(--r-sm);padding:10px 18px;cursor:pointer;text-decoration:none;transition:background .2s;}
-.em-qr__dl:hover{background:#ddf2cc;}
-.em-qr__right{display:flex;justify-content:center;}
-.em-qr__box{background:#fff;border:1px solid var(--card-b);border-radius:var(--r-md);padding:28px;box-shadow:var(--shadow-lg);display:flex;flex-direction:column;align-items:center;gap:14px;}
-#em-qrcode canvas,#em-qrcode img{border-radius:var(--r-xs);display:block;}
-.em-qr__lbl{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);}
-@media(max-width:768px){.em-qr{padding:64px 24px;}.em-qr__i{grid-template-columns:1fr;gap:40px;}}
+/* ════════ CONFERENCE CTA ════════ */
+.em-conf{background:var(--bg-tint);padding:80px 60px;position:relative;overflow:hidden;}
+.em-conf__i{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.em-conf__content{}
+.em-conf__h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:800;color:var(--text-1);letter-spacing:-.025em;line-height:1.12;margin:14px 0 16px;}
+.em-conf__h2 em{font-style:normal;color:var(--green);}
+.em-conf__body{font-size:16px;color:var(--text-2);line-height:1.72;margin-bottom:28px;}
+.em-conf__details{display:flex;flex-direction:column;gap:12px;margin-bottom:32px;}
+.em-conf__detail{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text-2);}
+.em-conf__detail-ico{width:32px;height:32px;min-width:32px;background:var(--green-t);border:1px solid var(--green-b);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.em-conf__detail strong{color:var(--text-1);font-weight:700;}
+.em-conf__ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.em-conf__ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--text-1);font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;padding:13px 24px;border-radius:3px;border:1.5px solid var(--card-b);text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s;}
+.em-conf__ghost:hover{border-color:var(--green);color:var(--green-d);}
+.em-conf__visual{display:flex;justify-content:center;position:relative;}
+.em-conf__badge{width:320px;border-radius:12px;box-shadow:0 20px 60px rgba(13,26,43,.18);transform:rotate(-2deg);transition:transform .4s ease;}
+.em-conf__badge:hover{transform:rotate(0deg) scale(1.02);}
+.em-conf__float{position:absolute;bottom:-10px;right:20px;background:#fff;border:1px solid var(--card-b);border-radius:8px;padding:10px 16px;box-shadow:0 8px 24px rgba(13,26,43,.1);display:flex;align-items:center;gap:8px;animation:floatUp 3s ease-in-out infinite;}
+.em-conf__float-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.8s ease-in-out infinite;}
+.em-conf__float-text{font-family:'Outfit',sans-serif;font-size:11px;font-weight:700;color:var(--text-1);letter-spacing:.02em;}
+@keyframes floatUp{0%,100%{transform:translateY(0);}50%{transform:translateY(-6px);}}
+@media(max-width:1024px){.em-conf{padding:64px 40px;}.em-conf__i{grid-template-columns:1fr;gap:40px;}.em-conf__visual{order:-1;}}
+@media(max-width:640px){.em-conf{padding:48px 24px;}.em-conf__badge{width:260px;}.em-conf__ctas{flex-direction:column;}.em-conf__ctas .em-btn,.em-conf__ghost{width:100%;justify-content:center;}}
 
 /* ════════ FOOTER ════════ */
 .em-footer{background:var(--bg-dark);border-top:1px solid rgba(255,255,255,.05);padding:60px 60px 36px;}
@@ -418,17 +428,30 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#0D1A2B;}
   </div>
 </section>
 
-<!-- ════════ QR CODE ════════ -->
-<section class="em-qr">
-  <div class="em-qr__i">
-    <div>
-      <div class="em-badge"><span class="em-badge__dot"></span>Scan to Connect</div>
-      <h2 class="em-qr__h2">One Scan.<br>Start the Conversation.</h2>
-      <p class="em-qr__sub">Scan to visit our landing page and connect with our team — no typing required.</p>
-      <div class="em-qr__url"><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M6.67 2.67H2.67a.67.67 0 00-.67.66v4h1.33V4h3.34V2.67zm2.66 0V4h3.34v3.33H14V3.33a.67.67 0 00-.67-.66H9.33zM2 9.33v3.34c0 .36.3.66.67.66h4V12H4V9.33H2zm10.67 0V12H9.33v1.33h4a.67.67 0 00.67-.66V9.33h-1.33z" fill="#3D5A7A"/></svg>emtechengineering.com/events/robotics-summit-2026</div>
-      <a class="em-qr__dl" id="em-qr-download"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v7M7 9L4.5 6.5M7 9L9.5 6.5M2 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Download for Print / Lanyard</a>
+<!-- ════════ CONFERENCE CTA ════════ -->
+<section class="em-conf">
+  <div class="em-conf__i">
+    <div class="em-conf__content">
+      <div class="em-badge"><span class="em-badge__dot"></span>Robotics Summit 2026</div>
+      <h2 class="em-conf__h2">We'll Be in Boston.<br><em>Let's Talk in Person.</em></h2>
+      <p class="em-conf__body">Our team is on the ground at Robotics Summit &amp; Expo — ready to talk through your project, walk you through how we work, and figure out if we're the right fit. No pitch deck. Just a real conversation.</p>
+      <div class="em-conf__details">
+        <div class="em-conf__detail"><div class="em-conf__detail-ico">📍</div><span><strong>Robotics Summit &amp; Expo</strong> · Boston Convention Center</span></div>
+        <div class="em-conf__detail"><div class="em-conf__detail-ico">📅</div><span><strong>May 27–28, 2026</strong> · Come find us on the floor</span></div>
+        <div class="em-conf__detail"><div class="em-conf__detail-ico">⚡</div><span><strong>Can't wait?</strong> Fill out the form above and we'll connect before the event</span></div>
+      </div>
+      <div class="em-conf__ctas">
+        <a href="#contact" class="em-btn">Start the Conversation →</a>
+        <a href="https://www.roboticssummit.com" target="_blank" rel="noopener" class="em-conf__ghost">View Event Details</a>
+      </div>
     </div>
-    <div class="em-qr__right"><div class="em-qr__box"><div id="em-qrcode"></div><p class="em-qr__lbl">Scan with your phone camera</p></div></div>
+    <div class="em-conf__visual">
+      <img class="em-conf__badge" src="lanyard-badge.png" alt="EMTECH lanyard badge — scan to connect at Robotics Summit 2026">
+      <div class="em-conf__float">
+        <span class="em-conf__float-dot"></span>
+        <span class="em-conf__float-text">3 team members attending</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -459,7 +482,6 @@ function emShowForm(intent){
     if(el){el.style.display='block';if(window.innerWidth<768){setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'nearest'});},100);}}
   }
 }
-document.addEventListener('DOMContentLoaded',function(){var c=document.getElementById('em-qrcode');if(c&&typeof QRCode!=='undefined'){new QRCode(c,{text:'https://www.emtechengineering.com/events/robotics-summit-2026',width:200,height:200,colorDark:'#0D1A2B',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.H});var dl=document.getElementById('em-qr-download');if(dl){dl.addEventListener('click',function(e){e.preventDefault();setTimeout(function(){var cv=c.querySelector('canvas');if(cv){var a=document.createElement('a');a.download='EMTECH-RoboticsSummit2026-QR.png';a.href=cv.toDataURL('image/png');a.click();}},120);});}}});
 </script>
 </body>
 </html>
